@@ -19,6 +19,7 @@ services:
 
   database:
     image: mysql
+    # Temporary command as strapi uses old node mysql lib that doesn't support new auth method.
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     cap_add:
